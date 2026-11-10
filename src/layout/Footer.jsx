@@ -1,0 +1,5 @@
+import React from 'react';
+import {Link} from 'react-router-dom';
+import {MapPin,Phone,Mail,ArrowRight} from 'lucide-react';
+import {site} from '../data/site';
+export default function Footer(){return <footer className="footer"><div className="container footer-grid"><Link to="/"><img className="footer-logo" src="/images/logo.png" alt="Ananth Civil Works"/></Link><div><h3>Explore</h3><Link to="/">Home</Link><Link to="/properties">Properties</Link><Link to="/gallery">Gallery</Link><Link to="/about">About Us</Link><Link to="/contact">Contact Us</Link></div><div><h3>Our Services</h3><Link to="/construction-works">Construction Works</Link><Link to="/interior-design">Interior Design</Link><Link to="/lift-design">Lift Design</Link></div><div><h3>Get in Touch</h3><p><MapPin size={15}/> {site.address}</p><a href={'tel:'+site.phone}><Phone size={15}/>{site.phone}</a><a href={'mailto:'+site.email}><Mail size={15}/>{site.email}</a></div></div><div className="container footer-bottom"><small>© {site.year} Ananth Civil Works. All rights reserved.</small><div><Link to="/about">About Us</Link><Link to="/contact">Contact Us <ArrowRight size={13}/></Link></div></div></footer>}
